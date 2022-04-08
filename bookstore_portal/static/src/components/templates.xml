@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates  xml:space="preserve">
+
+    <t t-name="bookstore_portal.App" owl="1">
+        <List
+                columns="['Title', 'Price', 'Pages', 'Kind']"
+                values="state.books"
+                search="true"
+        />
+    </t>
+
+    <t t-name="bookstore_portal.List" owl="1">
+        <div class="book-list">
+            <h1>List of Books</h1>
+
+            <t t-if="props.search == true">
+                <Search />
+            </t>
+
+            <table id="book-list-all">
+                <tr>
+                    <th t-foreach="props.columns" t-as="col">
+                        <t t-esc="col"/>
+                    </th>
+                </tr>
+                <tr t-foreach="props.values" t-as="value">
+                    <td><t t-esc="value.title"/></td>
+                    <td><t t-esc="value.price"/></td>
+                    <td><t t-esc="value.pages_number"/></td>
+                    <td><t t-esc="value.kind"/></td>
+                </tr>
+            </table>
+        </div>
+    </t>
+
+    <t t-name="bookstore_portal.Search">
+        <div class="search-box">
+            <input type="text" placeholder="Search here..." id="do-Search" t-on-keyup="doSearch"/><br/><br/>
+        </div>
+    </t>
+
+</templates>

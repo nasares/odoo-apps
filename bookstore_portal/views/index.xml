@@ -1,0 +1,17 @@
+<odoo>
+
+        <template id="index">
+            <t t-call="web.frontend_layout">
+
+                <div class="oe_structure">
+
+                    <div id="wrap" class="container">
+                        <div id="books"></div>
+                    </div>
+                </div>
+
+            </t>
+
+        </template>
+
+</odoo>

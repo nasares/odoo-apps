@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="assets_frontend" inherit_id="portal.assets_frontend" name="OWL Book Assets">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/bookstore_portal/static/src/css/style.css"/>
+        </xpath>
+
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/bookstore_portal/static/src/components/list/list.js"></script>
+            <script type="text/javascript" src="/bookstore_portal/static/src/components/search/search.js"></script>
+            <script type="text/javascript" src="/bookstore_portal/static/src/components/app.js"></script>
+            <script type="text/javascript" src="/bookstore_portal/static/src/main.js"></script>
+        </xpath>
+    </template>
+
+    <template id="book_header_menu" inherit_id="website_sale.template_header_default" name="OWL Book Header">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+            <a role="menuitem" href="/books" class="nav-link">
+                <span>Books</span>
+            </a>
+        </xpath>
+    </template>
+
+</odoo>
