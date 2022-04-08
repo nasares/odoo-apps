@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+user_bookstore_collection_access,user_bookstore_collection_access,model_bookstore_collection,base.group_user,1,1,1,0
+user_bookstore_kind_access,user_bookstore_kind_access,model_bookstore_kind,base.group_user,1,1,1,0
