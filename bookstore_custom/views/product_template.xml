@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="bookstore_custom_extends">
+      <field name="name">bookstore_custom_product_template.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_only_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='company_id']" position='after'>
+          <field name="is_book"/>
+        </xpath>
+        <xpath expr="//field[@name='url']" position='replace'>
+          <!-- <attribute name="attrs" >[('is_book', '=', False)]</attribute> -->
+          <field attrs="{'invisible' : [('is_book', '=', False)]}" name="url"/>
+        </xpath>
+        <xpath expr="//field[@name='pages_number']" position='replace'>
+          <field attrs="{'invisible' : [('is_book', '=', False)]}" name="pages_number"/>
+        </xpath>
+         <xpath expr="//field[@name='author_id']" position='replace'>
+          <field attrs="{'invisible' : [('is_book', '=', False)]}" name="author_id"/>
+        </xpath>
+        <xpath expr="//field[@name='kind_id']" position='replace'>
+          <field attrs="{'invisible' : [('is_book', '=', False)]}" name="kind_id"/>
+        </xpath>
+        <xpath expr="//field[@name='isbn_code']" position='replace'>
+          <field attrs="{'invisible' : [('is_book', '=', False)]}" name="isbn_code"/>
+        </xpath>
+        <xpath expr="//field[@name='editor_id']" position='replace'>
+          <field attrs="{'invisible' : [('is_book', '=', False)]}" name="editor_id"/>
+        </xpath>
+        
+      </field>
+    </record>
+  </data>
+</odoo>
