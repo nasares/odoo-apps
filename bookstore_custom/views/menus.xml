@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+ <record id="servoo_membership.menu_member_master" model="ir.ui.menu">
+    <field name="groups_id" eval="[(4, ref('servoo_membership_fee.group_membershipfee_invoice'))]"/>
+ </record>
+</odoo>

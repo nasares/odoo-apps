@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+user_bookstore_product,user_bookstore_product,product.model_product_template,group_bookstore_libraire,1,1,1,0

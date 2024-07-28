@@ -8,7 +8,11 @@
         'bookstore_portal',
     ],
     'data': [
+        'security/sale_group_bookstore.xml',
+        'security/ir.model.access.csv',
         'views/product_template.xml',
+        # 'views/menus.xml',
+        'views/sale_order_view.xml',
     ],
     'installable': True,
     'application': True,

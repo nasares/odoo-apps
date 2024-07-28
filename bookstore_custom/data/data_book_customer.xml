@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+  <!-- list book -->
+    <record id="product_book_odoo" model="product.template">
+        <field name="name">Odoo 17 cookbook</field>
+        <field name="is_book ">True</field>
+        <field name="list_price">20000</field>
+        <field name="type">product</field>
+    </record>
+    <record id="product_book_python" model="product.template">
+        <field name="name">Python 3 cookbook</field>
+        <field name="is_book ">True</field>
+        <field name="list_price">10000</field>
+        <field name="type">product</field>
+    </record>
+    <record id="product_book_angular" model="product.template">
+        <field name="name">Angular cookbook</field>
+        <field name="is_book ">True</field>
+        <field name="list_price">40000</field>
+        <field name="type">product</field>
+    </record>
+
+    <!-- list customer -->
+    <record id="partner_client_saly" model="res.partner">
+        <field name="name">Saly Abbo</field>
+    </record>
+    <record id="partner_client_nasser" model="res.partner">
+        <field name="name">Abdou Nasser</field>
+    </record>
+    <record id="partner_client_mohamed" model="res.partner">
+        <field name="name">Mohamed Souleyman</field>
+    </record>
+</data>

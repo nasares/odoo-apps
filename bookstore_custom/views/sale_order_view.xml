@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    
+    <record id="bookstore_backend.bookstore_backend_menu_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('bookstore_custom.group_bookstore_libraire'))]"/>
+    </record>
+    <record id="sale.product_menu_catalog" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('bookstore_custom.group_bookstore_libraire'))]"/>
+    </record>
+
+    <record model="ir.ui.view" id="sale_order_view_inherit">
+        <field name="name">sale.order.view.inherit1</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/notebook/page/field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_quick_create':True,'no_create_edit':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

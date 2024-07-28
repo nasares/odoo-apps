@@ -28,7 +28,6 @@
         <xpath expr="//field[@name='editor_id']" position='replace'>
           <field attrs="{'invisible' : [('is_book', '=', False)]}" name="editor_id"/>
         </xpath>
-        
       </field>
     </record>
   </data>
