@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates  xml:space="preserve">
+
+    <t t-name="bookstore_portal.List" owl="1">
+        <div t-attf-class="{{props.class}}">
+            <h1>List of Books</h1>
+
+            <t t-if="props.search">
+                <Search />
+            </t>
+
+            <table id="book-list-all">
+                <thead>
+                    <tr>
+                        <th t-foreach="props.columns" t-as="col" t-key="col">
+                            <t t-esc="col"/>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="listBooks" t-as="book" t-key="book.title">
+                        <td>
+                            <t t-esc="book.title"/>
+                        </td>
+                        <td>
+                            <t t-esc="book.price"/>
+                        </td>
+                        <td>
+                            <t t-esc="book.pages_number"/>
+                        </td>
+                        <td>
+                            <t t-esc="book.kind"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </t>
+
+</templates>
+
