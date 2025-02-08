@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="bookstore_portal.App" owl="1">
+        <div class="container p-4">
+            <div class="mt-4">
+                <List columns="columns" search="true"/>
+            </div>
+        </div>
+    </t>
+</templates>
+

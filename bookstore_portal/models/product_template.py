@@ -6,3 +6,4 @@ class Books(models.Model):
 
     pages_number = fields.Integer()
     url = fields.Char()
+

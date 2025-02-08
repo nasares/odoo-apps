@@ -1,6 +1,6 @@
-from odoo import http
 import json
 
+from odoo import http
 
 class BookstoreController(http.Controller):
 
@@ -34,3 +34,4 @@ class BookstoreController(http.Controller):
     def book_search(self):
         values = self.get_books_result()
         return json.dumps(values)
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates  xml:space="preserve">
+
+    <t t-name="bookstore_portal.Search" owl="1">
+        <div t-attf-class="{{props.class}}">
+            <input type="text" placeholder="Search here..." t-ref="searchInput" t-on-keyup="doSearch" />
+            <br/>
+            <br/>
+        </div>
+    </t>
+
+</templates>
+  

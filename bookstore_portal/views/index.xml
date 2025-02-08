@@ -1,26 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
+  <template id="book_header_menu" inherit_id="website_sale.template_header_default" name="OWL Book Header">
+      <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
+          <a role="menuitem" href="/books" class="nav-link">
+              <span>Books</span>
+          </a>
+      </xpath>
+  </template>
 
-        <template id="book_header_menu" inherit_id="website_sale.template_header_default" name="OWL Book Header">
-            <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="after">
-                <a role="menuitem" href="/books" class="nav-link">
-                    <span>NewBooks</span>
-                </a>
-            </xpath>
-        </template>
-
-
-        <template id="index">
-            <t t-call="web.frontend_layout">
-
-                <div class="oe_structure">
-
-                    <div id="wrap" class="container">
-                        <div id="books"></div>
-                    </div>
-                </div>
-
-            </t>
-
-        </template>
-
+	<template id="index" name="Books Portal">
+	    <t t-call="website.layout">
+		<div class="container">
+		    <div id="app"/>
+		</div>
+	    </t>
+	</template>
 </odoo>
+  
