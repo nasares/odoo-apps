@@ -131,6 +131,15 @@ dmypy.json
 # Local
 .idea/
 .vscode
+
 # compiled python files
 *.py[co]
 .DS_Store
+
+# Emacs
+.#*
+*~
+\#*\#
+.emacs.desktop
+.emacs.desktop.lock
+auto-save-list/
