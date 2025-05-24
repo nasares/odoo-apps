@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+          <record id="peef_partner_form_view" model="ir.ui.view">
+            <field name="name">peef.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Peef Profile">
+                        <group>
+                            <group string="Personal informations">
+                                <field name="sex"/>
+                                <field name="is_available"/>
+                                <field name="is_freelance"/>
+                                <field name="user_type"/>
+                                <field name="professional_title" placeholder="Professional title"/>
+                                <field name="linkedin" widget="url"/>
+                                <field name="onboard_step"/>
+                            </group>
+                            <group string="Language and skills">
+                                <field name="skills" placeholder="Python, Odoo, Flutter..."/>
+                                <field name="spoken_languages" placeholder="French, English..."/>
+                            </group>
+                            <group string="Fidelity">
+                                <field name="referral_code"/>
+                                <field name="discount"/>
+                                <field name="points"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+          </record>
+          <record id="peef_partner_tree_view" model="ir.ui.view">
+            <field name="name">peef.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="complete_name" position="after">
+                    <field name="user_type" optional="show"/>
+                    <field name="is_freelance" optional="show"/>
+                    <field name="is_available" optional="show"/>
+                    <field name="skills" optional="hide"/>
+                    <field name="daily_rate" optional="show" widget="monetary"/>
+                </field>
+            </field>
+          </record>
+        <record id="peef_partner_search_view" model="ir.ui.view">
+            <field name="name">peef.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="skills"/>
+                    <field name="spoken_languages"/>
+                    <field name="user_type"/>
+                </field>
+                <filter name="type_company" position="after">
+                    <filter string="Experts" name="developers" domain="[('is_freelance', '=', True)]"/>
+                    <filter string="Available" name="available" domain="[('is_available', '=', True)]"/>
+                </filter>
+                <filter name="group_country" position="after">
+                    <filter name="group_user_type" string="User type" context="{'group_by': 'user_type'}"/>
+                    <filter name="group_availability" string="Availability" context="{'group_by': 'is_available'}"/>
+                </filter>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="res_config_settings_group_stock_tracking_lot" model="res.config.settings">
+            <field name="group_stock_tracking_lot">True</field>
+        </record>
+
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('res_config_settings_group_stock_tracking_lot')]"/>
+        </function>
+
+        <record id="res_config_settings_group_stock_packaging" model="res.config.settings">
+            <field name="group_stock_packaging">True</field>
+        </record>
+
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('res_config_settings_group_stock_packaging')]"/>
+        </function>
+
+    </data>
+</odoo>
