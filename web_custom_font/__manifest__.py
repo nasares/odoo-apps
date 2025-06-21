@@ -1,13 +1,12 @@
 {
     'name': 'Web custom font',
-    'category': 'Tools',
-    'description': '''
-Web custom font
-========================
-
-Adding custom font in DIN 5008 PDF reports
-''',
-    'version': '17.0.0.0.0',
+    "description": "Adding custom font in PDF reports",
+    'category': 'Technical',
+    'version': '17.0.1.0.0',
+    "author": "Peef",
+    "website": "https://peef.dev/",
+    "license": "LGPL-3",
+    "sequence": "-1",
     'depends': [
         'web',
         'l10n_din5008',
@@ -24,5 +23,7 @@ Adding custom font in DIN 5008 PDF reports
             ),
         ]
     },
-    'license': 'LGPL-3',
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
