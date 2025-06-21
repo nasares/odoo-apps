@@ -1,12 +1,12 @@
 {
-    'name': "Bookstore Portal",
-    'summary': """Customers can get books throughout the portal""",
+    'name': 'Bookstore Portal',
+    "description": "Customers can get books throughout the portal",
     'category': 'Sales',
-    "images": ['static/description/images/undraw_books_6rhq.png'],
-    'version': '16.0.1.0.0',
-    "author": "Nasser",
-    "website": "https://nasser.cm/",
-    "license": "LGPL-3",
+    'version': '17.0.1.0.0',
+    "author": "Peef",
+    "website": "https://peef.dev/",
+    "license": "OPL-1",
+    "sequence": "-1",
     'depends': [
         'base',
         'portal',
@@ -15,8 +15,12 @@
         'bookstore_backend',
     ],
     'data': [
+        # data
+        # security
+        # views
         'views/index.xml',
         'views/product_template.xml',
+        # menus
     ],
     'assets': {
         'web.assets_frontend': [
@@ -41,4 +45,3 @@
     'application': True,
     'auto_install': False,
 }
-

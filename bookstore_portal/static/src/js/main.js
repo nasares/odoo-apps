@@ -5,6 +5,7 @@ import { templates } from "@web/core/assets";
 import { App } from "@bookstore_portal/components/app/app";
 
 owl.whenReady( () => {
-    mount(App, document.getElementById("app"), { templates, dev: false });
+    const target = document.querySelector("#app") || document.body;
+    mount(App, target, { templates, dev: false });
 });
 
