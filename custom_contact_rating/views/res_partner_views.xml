@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="view_partner_form_rating" model="ir.ui.view">
+			<field name="name">res.partner.form.rating</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<field name="vat" position="after">
+					<field name="customer_rating" 
+						widget="radio" 
+						invisible="is_company"
+					/>
+				</field>
+
+				<notebook position="inside">
+					<page string="Rating" name="rating_details" invisible="not customer_rating">
+						<field name="rating_notes" placeholder="Why this evaluation? Add details..." nolabel="1"/>
+					</page>
+				</notebook>
+			</field>
+		</record>
+
+		<record id="view_partner_tree_rating" model="ir.ui.view">
+			<field name="name">res.partner.tree.rating</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree"/>
+			<field name="arch" type="xml">
+				<field name="phone" position="after">
+					<field name="customer_rating" string="Rating" optional="hide"/>
+				</field>
+			</field>
+		</record>
+
+	</data>
+</odoo>
