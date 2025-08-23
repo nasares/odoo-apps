@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="notchpay_payment_provider_form" model="ir.ui.view">
+		<field name="name">notchpay.payment.provider.form</field>
+		<field name="model">payment.provider</field>
+		<field name="inherit_id" ref="payment.payment_provider_form"/>
+		<field name="arch" type="xml">
+			<group name="provider_credentials" position="inside">
+				<group invisible="code != 'notchpay'" name="notchpay_credentials">
+					<field name="notchpay_public_key" string="Public Key" required="code == 'notchpay' and state != 'disabled'"/>
+				</group>
+			</group>
+		</field>
+	</record>
+
+</odoo>
