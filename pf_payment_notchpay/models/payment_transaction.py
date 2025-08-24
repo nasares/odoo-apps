@@ -7,7 +7,7 @@ from odoo import _, fields, models
 from odoo.exceptions import ValidationError
 
 from odoo.addons.payment import utils as payment_utils
-from odoo.addons.nas_payment_notchpay.controllers.main import NotchpayController
+from odoo.addons.pf_payment_notchpay.controllers.main import NotchpayController
 
 
 _logger = logging.getLogger(__name__)
