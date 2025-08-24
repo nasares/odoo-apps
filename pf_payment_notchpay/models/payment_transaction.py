@@ -15,7 +15,7 @@ _logger = logging.getLogger(__name__)
 
 PROVIDER_CODE = "notchpay"
 
-PAYMENT_METHODS_MAPPING = {"om": "OM", "momo": "MoMo"}
+PAYMENT_METHODS_MAPPING = {"om": "Orange Money", "momo": "MTN Mobile Money"}
 
 PAYMENT_STATUS_MAPPING = {
     "complete": "complete",
